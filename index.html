@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+window.__resources = {
+  "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "assets/js/react.production.min.js",
+  "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/js/react-dom.production.min.js"
+};
+</script>
+<script src="assets/js/dc-runtime.js"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Baseline — Strength &amp; Conditioning Gym</title>
+<meta name="description" content="Baseline is a members-only strength and conditioning gym. Six class formats, four coaches, transparent pricing — no hype, no guesswork.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/704cefb7-85eb-4201-ba4a-4c47f83bdc48.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/04bb9a66-ae85-4fa6-a2f7-439d0dd9ba7e.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/6995e31b-2394-46b6-a474-a9a8efa6bb1e.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/a1615406-a725-4e03-b151-e1819a3858fc.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/6d4b1503-c103-4588-b065-9238cd36f668.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/66b79132-74bf-42c3-ada6-6b9a563c00e4.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/fbdac66f-3916-4303-b233-d757db896331.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/96effb5d-fd5d-4246-b47c-e76d1c83a984.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/bf078317-a474-4f33-a8d2-badcf2d29cd1.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/ba7dc61d-0f5f-47d3-bd64-0bd084661222.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/b41fdd1c-06f6-4d1e-983a-b02bd6f8c57c.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/5b1f7898-ba0d-49b1-bf09-b34d2f8d135c.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/44ff287b-d23b-4c5f-b6db-65092f7b2964.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/34c51c85-afc9-45ea-aac0-b89444b75c53.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/2380b19f-b85e-4c0c-b74b-49ad3a132eac.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/6cceab3a-c60b-4a1e-82a6-b4cdbbe6e64c.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/f8903cc8-815d-4b23-8aba-30d8e57cce27.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/c564047d-9829-42a6-99ad-19622bf0244f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/446ac4b1-91a7-4e5e-8aa2-aa7d6b52f93c.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/78c88072-6509-482e-bea1-785b0c8b3197.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/b3e48015-3a74-47d9-9224-3d3ed195d86f.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/db782c7d-e756-49c1-811a-b20e2d290d23.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/66e6c1c1-cfeb-4544-8de9-9ef0c6b351d4.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/b4c2adf7-6bf0-47e0-97cf-81e4ee1f92ca.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/127080f4-7c86-4be2-ba70-bdabfc59bd22.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/612cef8d-341d-4c56-a46b-7959c77d62be.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/64ab4d97-d1c8-4aac-b732-b758d93635b0.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/aa0b3a77-fc64-4cbd-8dfa-c37bbce6c745.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/5302486e-5e0d-4d27-9765-6fb6f9c93a8c.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/a834226c-749c-448e-a4b1-94d4c567b749.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/127080f4-7c86-4be2-ba70-bdabfc59bd22.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/612cef8d-341d-4c56-a46b-7959c77d62be.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/64ab4d97-d1c8-4aac-b732-b758d93635b0.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/aa0b3a77-fc64-4cbd-8dfa-c37bbce6c745.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/5302486e-5e0d-4d27-9765-6fb6f9c93a8c.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/a834226c-749c-448e-a4b1-94d4c567b749.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/127080f4-7c86-4be2-ba70-bdabfc59bd22.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/612cef8d-341d-4c56-a46b-7959c77d62be.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/64ab4d97-d1c8-4aac-b732-b758d93635b0.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/aa0b3a77-fc64-4cbd-8dfa-c37bbce6c745.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/5302486e-5e0d-4d27-9765-6fb6f9c93a8c.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/a834226c-749c-448e-a4b1-94d4c567b749.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="assets/js/image-slot.js"></script>
+<style>
+  html, body { margin:0; padding:0; background:#141419; }
+  body { -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  button { font:inherit; color:inherit; background:none; border:none; margin:0; }
+  a { color:#F5D400; text-decoration:none; }
+  a:hover { color:#ECE9E1; }
+  ::selection { background:#F5D400; color:#141419; }
+  :focus-visible { outline:2px solid #F5D400; outline-offset:3px; }
+  @keyframes flapIn {
+    0%   { transform:rotateX(-92deg); opacity:.25; }
+    55%  { transform:rotateX(10deg); opacity:1; }
+    78%  { transform:rotateX(-4deg); }
+    100% { transform:rotateX(0deg); opacity:1; }
+  }
+  @keyframes riseIn {
+    from { opacity:0; transform:translateY(10px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
+</style>
+</helmet>
+
+<div style="background:#141419;color:#ECE9E1;font-family:Manrope,system-ui,sans-serif;min-height:100vh;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:40;background:rgba(20,20,25,.88);backdrop-filter:blur(12px);border-bottom:1px solid #26262E">
+    <div style="max-width:1240px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <button sc-camel-on-click="{{ goHome }}" style="display:flex;align-items:baseline;gap:10px;cursor:pointer">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;letter-spacing:.14em;text-transform:uppercase">Baseline</span>
+        <span style="width:7px;height:7px;background:#F5D400;display:block;transform:translateY(-3px)"></span>
+      </button>
+
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex;align-items:center;gap:34px">
+          <sc-for list="{{ nav }}" as="n" hint-placeholder-count="5">
+            <button sc-camel-on-click="{{ n.go }}" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:8px 0;border-bottom:1px solid transparent;color:{{ n.fg }};border-bottom-color:{{ n.line }}" style-hover="color:#ECE9E1">{{ n.label }}</button>
+          </sc-for>
+          <button sc-camel-on-click="{{ goSchedule }}" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:#F5D400;color:#141419;padding:12px 20px;font-weight:600;cursor:pointer" style-hover="background:#ECE9E1">Book</button>
+        </nav>
+      </sc-if>
+
+      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+        <button sc-camel-on-click="{{ toggleMenu }}" aria-label="Menu" style="display:flex;flex-direction:column;gap:5px;padding:12px;cursor:pointer;border:1px solid #33333D">
+          <span style="width:20px;height:1.5px;background:#ECE9E1;display:block"></span>
+          <span style="width:20px;height:1.5px;background:#ECE9E1;display:block"></span>
+          <span style="width:13px;height:1.5px;background:#F5D400;display:block"></span>
+        </button>
+      </sc-if>
+    </div>
+
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <nav style="border-top:1px solid #26262E;padding:12px 24px 22px;display:flex;flex-direction:column;gap:2px;animation:riseIn .25s ease">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="5">
+          <button sc-camel-on-click="{{ n.go }}" style="text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:26px;text-transform:uppercase;letter-spacing:.06em;padding:14px 0;min-height:48px;cursor:pointer;border-bottom:1px solid #22222A;color:{{ n.fg }}">{{ n.label }}</button>
+        </sc-for>
+      </nav>
+    </sc-if>
+  </header>
+
+  <!-- ══════════════ HOME ══════════════ -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main>
+    <section style="max-width:1240px;margin:0 auto;padding:clamp(56px,9vw,128px) 24px clamp(40px,6vw,72px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,5vw,48px)">
+        <span style="width:36px;height:1px;background:#F5D400;display:block"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8A8A96">General fitness · Est. 2019 · Members only</span>
+      </div>
+      <h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(52px,11.5vw,158px);line-height:.88;letter-spacing:-.015em;text-wrap:balance">Train by the<br>numbers <span style="color:#F5D400">you set.</span></h1>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;margin-top:clamp(32px,5vw,56px);align-items:end">
+        <p style="margin:0;max-width:44ch;color:#A2A2AE;font-size:17px;line-height:1.65">No hype, no guesswork. Every class at Baseline is measured — load, output, capacity, recovery — so the only thing you compete with is your last session.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <button sc-camel-on-click="{{ goSchedule }}" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;background:#F5D400;color:#141419;white-space:nowrap;padding:18px 30px;font-weight:600;cursor:pointer;min-height:48px" style-hover="background:#ECE9E1">Book a class</button>
+          <button sc-camel-on-click="{{ goPricing }}" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;border:1px solid #3A3A46;white-space:nowrap;padding:18px 30px;cursor:pointer;min-height:48px;color:#ECE9E1" style-hover="border-color:#F5D400;color:#F5D400">See pricing</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- split-flap stat ticker -->
+    <section aria-label="Live club metrics" style="border-top:1px solid #26262E;border-bottom:1px solid #26262E;background:#101014">
+      <div style="max-width:1240px;margin:0 auto;padding:clamp(28px,4vw,44px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(28px,4vw,48px)">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#7C7C88">Members training this week</span>
+          {{ tickerMembers }}
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#7C7C88">Open slots today</span>
+          {{ tickerSlots }}
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#7C7C88">Average member rating</span>
+          {{ tickerRating }}
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) 24px clamp(72px,10vw,140px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:1px;background:#26262E;border:1px solid #26262E">
+        <sc-for list="{{ entries }}" as="e" hint-placeholder-count="3">
+          <button sc-camel-on-click="{{ e.go }}" style="background:#141419;text-align:left;padding:clamp(28px,4vw,44px) clamp(24px,3vw,36px);cursor:pointer;display:flex;flex-direction:column;gap:18px;min-height:250px;transition:background .25s ease" style-hover="background:#191920">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#F5D400">{{ e.num }}</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(30px,4vw,40px);text-transform:uppercase;letter-spacing:.01em;line-height:1">{{ e.title }}</span>
+            <span style="color:#9A9AA6;font-size:15px;line-height:1.6;max-width:32ch">{{ e.body }}</span>
+            <span style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ECE9E1">{{ e.cta }} →</span>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <!-- ══════════════ CLASSES ══════════════ -->
+  <sc-if value="{{ isClasses }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) 24px clamp(72px,10vw,140px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F5D400">02 / Classes</span>
+    <h2 style="margin:18px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(40px,7vw,86px);line-height:.92;letter-spacing:-.01em">Six formats.<br>One standard.</h2>
+    <p style="margin:24px 0 0;max-width:52ch;color:#A2A2AE;font-size:17px;line-height:1.65">Each format runs on a fixed protocol with a named coach and a published intensity band, so you always know what you are walking into.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#26262E;border:1px solid #26262E;margin-top:clamp(36px,5vw,64px)">
+      <sc-for list="{{ classes }}" as="c" hint-placeholder-count="6">
+        <article style="background:#141419;padding:clamp(26px,3.5vw,38px);display:flex;flex-direction:column;gap:16px;transition:background .25s ease" style-hover="background:#191920">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6E6E7A">{{ c.num }}</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#ECE9E1">{{ c.duration }}</span>
+          </div>
+          <h3 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(26px,3.2vw,34px);text-transform:uppercase;line-height:1.02;letter-spacing:.01em">{{ c.name }}</h3>
+          <p style="margin:0;color:#9A9AA6;font-size:15px;line-height:1.6">{{ c.blurb }}</p>
+          <div style="margin-top:auto;padding-top:20px;border-top:1px solid #24242C;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#A2A2AE">{{ c.coach }}</span>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6E6E7A">{{ c.level }}</span>
+              <div style="display:flex;gap:3px">
+                <sc-for list="{{ c.bars }}" as="b" hint-placeholder-count="5">
+                  <span style="width:14px;height:4px;display:block;background:{{ b.bg }}"></span>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </main>
+  </sc-if>
+
+  <!-- ══════════════ TRAINERS ══════════════ -->
+  <sc-if value="{{ isTrainers }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) 24px clamp(72px,10vw,140px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F5D400">03 / Trainers</span>
+    <h2 style="margin:18px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(40px,7vw,86px);line-height:.92;letter-spacing:-.01em">Four coaches.<br>No egos.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,3.5vw,44px);margin-top:clamp(36px,5vw,64px)">
+      <sc-for list="{{ trainers }}" as="t" hint-placeholder-count="4">
+        <article style="display:flex;flex-direction:column;gap:20px">
+          <div style="position:relative;width:100%;aspect-ratio:3/4;background:#101014;border:1px solid #26262E">
+            <image-slot id="{{ t.slot }}" shape="rect" placeholder="{{ t.slotHint }}" src="{{ t.photoSrc }}" credit="{{ t.photoCredit }}" credit-href="{{ t.photoCreditHref }}"></image-slot>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#F5D400">{{ t.disciplineLabel }}</span>
+            <h3 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(26px,3vw,32px);text-transform:uppercase;letter-spacing:.02em;line-height:1">{{ t.name }}</h3>
+            <p style="margin:0;color:#9A9AA6;font-size:15px;line-height:1.6">{{ t.bio }}</p>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#6E6E7A;padding-top:6px">{{ t.meta }}</span>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </main>
+  </sc-if>
+
+  <!-- ══════════════ PRICING ══════════════ -->
+  <sc-if value="{{ isPricing }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) 24px clamp(72px,10vw,140px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F5D400">04 / Pricing</span>
+    <h2 style="margin:18px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(40px,7vw,86px);line-height:.92;letter-spacing:-.01em">Pay for<br>what you use.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:clamp(36px,5vw,64px)">
+      <sc-for list="{{ tiers }}" as="p" hint-placeholder-count="3">
+        <article style="padding:clamp(30px,4vw,44px);display:flex;flex-direction:column;gap:22px;border:1px solid #26262E;background:{{ p.bg }};color:{{ p.fg }}">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:24px;text-transform:uppercase;letter-spacing:.08em">{{ p.name }}</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;flex:0 0 auto;padding:5px 9px;border:1px solid {{ p.badgeLine }};color:{{ p.badgeFg }}">{{ p.badge }}</span>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:6px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:clamp(44px,6vw,62px);letter-spacing:-.03em;line-height:.9">{{ p.price }}</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:{{ p.muted }};padding-bottom:8px">{{ p.unit }}</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:{{ p.muted }}">{{ p.blurb }}</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;border-top:1px solid {{ p.line }};padding-top:22px">
+            <sc-for list="{{ p.features }}" as="f" hint-placeholder-count="4">
+              <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:{{ p.tick }};padding-top:2px">/</span>
+                <span>{{ f.text }}</span>
+              </li>
+            </sc-for>
+          </ul>
+          <button sc-camel-on-click="{{ goSchedule }}" style="margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:17px 24px;min-height:48px;cursor:pointer;font-weight:600;background:{{ p.btnBg }};color:{{ p.btnFg }};border:1px solid {{ p.btnLine }}">{{ p.cta }}</button>
+        </article>
+      </sc-for>
+    </div>
+    <p style="margin:28px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#6E6E7A">All memberships month-to-month. No joining fee, no contract, cancel with 14 days notice.</p>
+  </main>
+  </sc-if>
+
+  <!-- ══════════════ SCHEDULE ══════════════ -->
+  <sc-if value="{{ isSchedule }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) 24px clamp(72px,10vw,140px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F5D400">05 / Schedule</span>
+    <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end;margin-top:18px">
+      <h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(40px,7vw,86px);line-height:.92;letter-spacing:-.01em">The board</h2>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6E6E7A">{{ boardStamp }}</span>
+    </div>
+
+    <div role="tablist" aria-label="Day" style="display:flex;flex-wrap:wrap;gap:1px;background:#26262E;border:1px solid #26262E;margin-top:clamp(28px,4vw,44px)">
+      <sc-for list="{{ days }}" as="d" hint-placeholder-count="6">
+        <button role="tab" sc-camel-on-click="{{ d.go }}" style="flex:1 1 96px;min-height:52px;padding:14px 10px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:flex;flex-direction:column;gap:5px;align-items:center;background:{{ d.bg }};color:{{ d.fg }}" style-hover="color:#ECE9E1">
+          <span>{{ d.label }}</span>
+          <span style="font-size:9px;letter-spacing:.14em;color:{{ d.sub }}">{{ d.count }}</span>
+        </button>
+      </sc-for>
+    </div>
+
+    <div style="border:1px solid #26262E;border-top:none;background:#101014">
+      <div style="display:flex;gap:16px;padding:14px 20px;border-bottom:1px solid #26262E;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#5E5E6A">
+        <span style="flex:0 0 74px">Time</span>
+        <span style="flex:1 1 170px">Class</span>
+        <span style="flex:0 1 150px">Coach</span>
+        <span style="flex:0 0 78px">Cap.</span>
+        <span style="flex:0 0 112px;text-align:right">Status</span>
+      </div>
+      <sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
+        <button sc-camel-on-click="{{ r.go }}" disabled="{{ r.disabled }}" aria-label="{{ r.aria }}" style="width:100%;text-align:left;display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:20px;border-bottom:1px solid #1E1E26;cursor:{{ r.cursor }};transition:background .2s ease;background:{{ r.rowBg }}" style-hover="background:#17171E">
+          <span style="flex:0 0 74px;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.02em;color:{{ r.timeFg }}">{{ r.time }}</span>
+          <span style="flex:1 1 170px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:21px;text-transform:uppercase;letter-spacing:.03em;color:{{ r.nameFg }}">{{ r.cls }}</span>
+          <span style="flex:0 1 150px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7E7E8A">{{ r.coach }}</span>
+          <span style="flex:0 0 78px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:{{ r.capFg }}">{{ r.cap }}</span>
+          <span style="flex:0 0 112px;display:flex;justify-content:flex-end">
+            <sc-if value="{{ r.isBooked }}" hint-placeholder-val="{{ false }}">
+              <span style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:11px;letter-spacing:.16em;padding:8px 12px;background:#F5D400;color:#141419;transform-origin:top center;animation:flapIn .5s cubic-bezier(.28,.8,.3,1) both;border-top:1px solid rgba(20,20,25,.35)">BOOKED</span>
+            </sc-if>
+            <sc-if value="{{ r.isOpen }}" hint-placeholder-val="{{ true }}">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;padding:8px 12px;border:1px solid #3A3A46;color:#ECE9E1">OPEN</span>
+            </sc-if>
+            <sc-if value="{{ r.isFull }}" hint-placeholder-val="{{ false }}">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;padding:8px 12px;border:1px solid #2A2A32;color:#55555F">FULL</span>
+            </sc-if>
+          </span>
+        </button>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ hasConfirm }}" hint-placeholder-val="{{ false }}">
+      <div role="status" style="margin-top:28px;border:1px solid #F5D400;background:#17170F;padding:clamp(24px,3.5vw,34px);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;animation:riseIn .3s ease">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#F5D400">Confirmed · {{ confirmRef }}</span>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(26px,3.4vw,34px);text-transform:uppercase;letter-spacing:.02em;line-height:1.05">{{ confirmTitle }}</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#A2A2AE;letter-spacing:.04em">{{ confirmMeta }}</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <button sc-camel-on-click="{{ cancelBooking }}" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border:1px solid #3A3A46;padding:15px 22px;min-height:48px;cursor:pointer;color:#ECE9E1" style-hover="border-color:#ECE9E1">Release slot</button>
+          <button sc-camel-on-click="{{ dismissConfirm }}" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:#F5D400;color:#141419;font-weight:600;padding:15px 22px;min-height:48px;cursor:pointer" style-hover="background:#ECE9E1">Done</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <p style="margin:24px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#6E6E7A;line-height:1.7">Tap an open slot to reserve it. Bookings release automatically 2 hours before class if unconfirmed.</p>
+  </main>
+  </sc-if>
+
+  <footer style="border-top:1px solid #26262E;background:#101014">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Baseline</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6E6E7A">Train by the numbers you set.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#F5D400">Hours</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9AA6">Mon–Fri · 05:30 – 22:00</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9AA6">Sat–Sun · 07:00 – 18:00</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#F5D400">Club</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9AA6">18 Kellner Street, Unit 4</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9A9AA6">hello@baseline.fit</span>
+      </div>
+    </div>
+    <div style="max-width:1240px;margin:0 auto;padding:0 24px 36px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#4E4E58">© 2026 Baseline Performance Club</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+const YELLOW = '#F5D400', PAPER = '#ECE9E1', STEEL = '#6E6E7A';
+
+const CLASSES = [
+  { name: 'Strength Foundations', coach: 'Marcus Renner', duration: '60 MIN', intensity: 4, level: 'Load',
+    blurb: 'Barbell mechanics on a five-week wave. Squat, hinge, press, pull — logged set by set.' },
+  { name: 'Metabolic Conditioning', coach: 'Tomi Adeyemi', duration: '45 MIN', intensity: 5, level: 'Output',
+    blurb: 'Interval work built to a target heart-rate band. Short, exact, unforgiving.' },
+  { name: 'Mobility & Recovery', coach: 'Sena Park', duration: '50 MIN', intensity: 1, level: 'Restore',
+    blurb: 'Joint-by-joint range work and loaded stretching. The session that keeps the others possible.' },
+  { name: 'Row & Ride', coach: 'Tomi Adeyemi', duration: '45 MIN', intensity: 4, level: 'Output',
+    blurb: 'Split-and-watt pacing across erg and bike. Every effort has a number on the board.' },
+  { name: 'Boxing Fundamentals', coach: 'Diego Ibarra', duration: '55 MIN', intensity: 3, level: 'Skill',
+    blurb: 'Stance, guard, footwork, then pad rounds. Technique before intensity, always.' },
+  { name: 'Flow & Breath', coach: 'Sena Park', duration: '60 MIN', intensity: 2, level: 'Restore',
+    blurb: 'Continuous movement paired to breath count. Low load, high attention.' }
+];
+
+const TRAINERS = [
+  { name: 'Marcus Renner', discipline: 'Strength & Conditioning', slot: 'baseline-coach-marcus',
+    bio: 'Fifteen years under the bar and ten coaching it. Marcus builds programmes that progress in grams, not guesses.',
+    meta: 'CSCS · Since 2019',
+    photoSrc: 'https://images.unsplash.com/photo-1733231291465-d86afc9336ac?auto=format&fit=crop&w=800&q=80',
+    photoCredit: 'Photo by Carlos Gil on Unsplash', photoCreditHref: 'https://unsplash.com/@carlosgil83' },
+  { name: 'Tomi Adeyemi', discipline: 'Metabolic Training', slot: 'baseline-coach-tomi',
+    bio: 'Former 800m specialist. Tomi treats conditioning as pacing practice — you finish knowing exactly what you spent.',
+    meta: 'NASM-CPT · Since 2020',
+    photoSrc: 'https://images.unsplash.com/photo-1727094141271-9bea5bc8c757?auto=format&fit=crop&w=800&q=80',
+    photoCredit: 'Photo by Arnaud STECKLE on Unsplash', photoCreditHref: 'https://unsplash.com/@arnaudsteckle' },
+  { name: 'Sena Park', discipline: 'Mobility & Yoga', slot: 'baseline-coach-sena',
+    bio: 'Movement screening and loaded range work. Sena reads a squat the way most people read a sentence.',
+    photoSrc: 'https://images.unsplash.com/photo-1552196527-bffef41ef674?auto=format&fit=crop&w=800&q=80',
+    photoCredit: 'Photo by Dane Wetton on Unsplash', photoCreditHref: 'https://unsplash.com/@danewett',
+    meta: 'FRCms · 500h RYT' },
+  { name: 'Diego Ibarra', discipline: 'Boxing & Technique', slot: 'baseline-coach-diego',
+    bio: 'Amateur record of 24–3, now entirely focused on teaching. Precision first, power as a by-product.',
+    meta: 'Level 3 Coach · Since 2021',
+    photoSrc: 'https://images.unsplash.com/photo-1570170609489-43197f518df0?auto=format&fit=crop&w=800&q=80',
+    photoCredit: 'Photo by Metin Ozer on Unsplash', photoCreditHref: 'https://unsplash.com/@metinozer' }
+];
+
+const TIERS = [
+  { name: 'Drop-in', badge: 'Flexible', price: '$22', unit: '/ class', featured: false,
+    blurb: 'For visitors and irregular weeks. Book any open slot, no commitment.',
+    features: ['Any class, any coach', 'Book up to 7 days ahead', 'Kit and towel included', 'Free intake screening'],
+    cta: 'Book a single class' },
+  { name: 'All-Access', badge: 'Most popular', price: '$119', unit: '/ month', featured: true,
+    blurb: 'Unlimited classes plus open-gym hours. The default for members training 3+ times a week.',
+    features: ['Unlimited classes', 'Open-gym access, all hours', 'Quarterly performance review', 'Priority booking 14 days ahead', 'Guest pass every month'],
+    cta: 'Start All-Access' },
+  { name: '8-Pack', badge: 'Fixed volume', price: '$149', unit: '/ month', featured: false,
+    blurb: 'Eight credits a month for a set training rhythm. Unused credits roll once.',
+    features: ['8 class credits monthly', 'One month rollover', 'Open-gym, off-peak', 'Shareable with one household member'],
+    cta: 'Take the 8-Pack' }
+];
+
+const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+const BOARD = {
+  Mon: [['06:15', 'Strength Foundations', 'Renner', 16, 11], ['07:30', 'Metabolic Conditioning', 'Adeyemi', 20, 20], ['12:15', 'Row & Ride', 'Adeyemi', 14, 9], ['17:45', 'Boxing Fundamentals', 'Ibarra', 12, 7], ['19:00', 'Mobility & Recovery', 'Park', 18, 12]],
+  Tue: [['06:15', 'Row & Ride', 'Adeyemi', 14, 13], ['09:00', 'Mobility & Recovery', 'Park', 18, 6], ['12:15', 'Strength Foundations', 'Renner', 16, 16], ['18:00', 'Metabolic Conditioning', 'Adeyemi', 20, 15], ['19:15', 'Flow & Breath', 'Park', 22, 10]],
+  Wed: [['06:15', 'Strength Foundations', 'Renner', 16, 14], ['07:30', 'Boxing Fundamentals', 'Ibarra', 12, 12], ['12:15', 'Metabolic Conditioning', 'Adeyemi', 20, 11], ['17:45', 'Row & Ride', 'Adeyemi', 14, 8], ['19:00', 'Flow & Breath', 'Park', 22, 13]],
+  Thu: [['06:15', 'Metabolic Conditioning', 'Adeyemi', 20, 17], ['09:00', 'Flow & Breath', 'Park', 22, 7], ['12:15', 'Boxing Fundamentals', 'Ibarra', 12, 10], ['18:00', 'Strength Foundations', 'Renner', 16, 16], ['19:15', 'Mobility & Recovery', 'Park', 18, 9]],
+  Fri: [['06:15', 'Strength Foundations', 'Renner', 16, 12], ['07:30', 'Row & Ride', 'Adeyemi', 14, 11], ['12:15', 'Mobility & Recovery', 'Park', 18, 5], ['17:30', 'Metabolic Conditioning', 'Adeyemi', 20, 19], ['18:45', 'Boxing Fundamentals', 'Ibarra', 12, 12]],
+  Sat: [['08:00', 'Metabolic Conditioning', 'Adeyemi', 20, 16], ['09:15', 'Strength Foundations', 'Renner', 16, 10], ['10:30', 'Boxing Fundamentals', 'Ibarra', 12, 6], ['11:45', 'Flow & Breath', 'Park', 22, 14], ['13:00', 'Mobility & Recovery', 'Park', 18, 8]]
+};
+
+const NAV = [
+  { label: 'Home', page: 'home' },
+  { label: 'Classes', page: 'classes' },
+  { label: 'Trainers', page: 'trainers' },
+  { label: 'Pricing', page: 'pricing' },
+  { label: 'Schedule', page: 'schedule' }
+];
+
+class Component extends DCLogic {
+  state = {
+    page: 'home', day: 'Mon', booked: {}, confirm: null,
+    menuOpen: false, wide: true,
+    stats: { members: 0, slots: 0, rating: 0 }
+  };
+
+  componentDidMount() {
+    this.measure();
+    this._onResize = () => this.measure();
+    window.addEventListener('resize', this._onResize);
+    this.runCounters();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+
+  measure() {
+    const wide = window.innerWidth >= 860;
+    if (wide !== this.state.wide) this.setState({ wide, menuOpen: false });
+  }
+
+  runCounters() {
+    const targets = { members: 1284, slots: 37, rating: 4.93 };
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { this.setState({ stats: targets }); return; }
+    const start = performance.now(), dur = 1500;
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / dur);
+      const e = 1 - Math.pow(1 - t, 3);
+      this.setState({ stats: {
+        members: Math.round(targets.members * e),
+        slots: Math.round(targets.slots * e),
+        rating: targets.rating * e
+      }});
+      if (t < 1) this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+
+  flaps(text, accent) {
+    const cells = String(text).split('').map((ch, i) => {
+      const sep = ch === '.' || ch === ',';
+      return React.createElement('span', {
+        key: i + ':' + ch,
+        style: {
+          fontFamily: "'IBM Plex Mono', monospace", fontWeight: 500,
+          fontSize: sep ? '26px' : 'clamp(38px,5.4vw,58px)',
+          lineHeight: 1, letterSpacing: '-.02em',
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          minWidth: sep ? '12px' : '0.66em',
+          padding: sep ? '0' : '10px 6px 12px',
+          background: sep ? 'transparent' : '#181820',
+          color: accent ? YELLOW : PAPER,
+          borderTop: sep ? 'none' : '1px solid #2E2E38',
+          boxShadow: sep ? 'none' : 'inset 0 -1px 0 rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.04)',
+          transformOrigin: 'top center',
+          animation: 'flapIn .42s cubic-bezier(.3,.8,.3,1) both',
+          alignSelf: sep ? 'flex-end' : 'stretch'
+        }
+      }, ch);
+    });
+    return React.createElement('div', {
+      style: { display: 'flex', gap: '3px', alignItems: 'stretch', perspective: '420px' }
+    }, cells);
+  }
+
+  slotsFor(day) {
+    const booked = this.state.booked;
+    return BOARD[day].map((s, i) => {
+      const id = day + '-' + i;
+      const isBooked = !!booked[id];
+      const taken = s[4] + (isBooked ? 1 : 0);
+      const isFull = !isBooked && taken >= s[3];
+      return { id, day, time: s[0], cls: s[1], coach: s[2], size: s[3], taken, isBooked, isFull, isOpen: !isBooked && !isFull };
+    });
+  }
+
+  book(slot) {
+    if (slot.isFull || slot.isBooked) return;
+    const ref = 'BL-' + slot.day.toUpperCase() + '-' + slot.time.replace(':', '');
+    this.setState(s => ({
+      booked: Object.assign({}, s.booked, { [slot.id]: true }),
+      confirm: { id: slot.id, ref, title: slot.cls, meta: slot.day + ' · ' + slot.time + ' · Coach ' + slot.coach + ' · Spot ' + (slot.taken + 1) + ' of ' + slot.size }
+    }));
+  }
+
+  renderVals() {
+    const { page, day, stats, confirm } = this.state;
+    const rows = this.slotsFor(day);
+
+    return {
+      wide: this.state.wide,
+      narrow: !this.state.wide,
+      menuOpen: this.state.menuOpen && !this.state.wide,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+
+      isHome: page === 'home', isClasses: page === 'classes', isTrainers: page === 'trainers',
+      isPricing: page === 'pricing', isSchedule: page === 'schedule',
+      goHome: () => this.go('home'),
+      goPricing: () => this.go('pricing'),
+      goSchedule: () => this.go('schedule'),
+
+      nav: NAV.map(n => ({
+        label: n.label,
+        fg: page === n.page ? PAPER : '#8A8A96',
+        line: page === n.page ? YELLOW : 'transparent',
+        go: () => this.go(n.page)
+      })),
+
+      tickerMembers: this.flaps(stats.members.toLocaleString('en-US'), false),
+      tickerSlots: this.flaps(String(stats.slots), true),
+      tickerRating: this.flaps(stats.rating.toFixed(2), false),
+
+      entries: [
+        { num: '01', title: 'Classes', body: 'Six formats, published intensity bands, fixed protocols.', cta: 'View formats', go: () => this.go('classes') },
+        { num: '02', title: 'Trainers', body: 'Four coaches who program for progression, not punishment.', cta: 'Meet the team', go: () => this.go('trainers') },
+        { num: '03', title: 'Schedule', body: 'Live weekly board with real capacity. Book in one tap.', cta: 'Open the board', go: () => this.go('schedule') }
+      ],
+
+      classes: CLASSES.map((c, i) => ({
+        num: String(i + 1).padStart(2, '0'),
+        name: c.name, coach: 'Coach ' + c.coach, duration: c.duration, level: c.level, blurb: c.blurb,
+        bars: [0, 1, 2, 3, 4].map(n => ({ bg: n < c.intensity ? YELLOW : '#2C2C36' }))
+      })),
+
+      trainers: TRAINERS.map(t => ({
+        name: t.name, bio: t.bio, meta: t.meta, disciplineLabel: t.discipline,
+        slot: t.slot, slotHint: 'Portrait — ' + t.name,
+        photoSrc: t.photoSrc, photoCredit: t.photoCredit, photoCreditHref: t.photoCreditHref
+      })),
+
+      tiers: TIERS.map(t => ({
+        name: t.name, badge: t.badge, price: t.price, unit: t.unit, blurb: t.blurb, cta: t.cta,
+        features: t.features.map(f => ({ text: f })),
+        bg: t.featured ? YELLOW : '#141419',
+        fg: t.featured ? '#141419' : PAPER,
+        muted: t.featured ? 'rgba(20,20,25,.72)' : '#9A9AA6',
+        line: t.featured ? 'rgba(20,20,25,.22)' : '#24242C',
+        tick: t.featured ? 'rgba(20,20,25,.55)' : YELLOW,
+        badgeFg: t.featured ? '#141419' : STEEL,
+        badgeLine: t.featured ? 'rgba(20,20,25,.35)' : '#33333D',
+        btnBg: t.featured ? '#141419' : 'transparent',
+        btnFg: t.featured ? PAPER : PAPER,
+        btnLine: t.featured ? '#141419' : '#3A3A46'
+      })),
+
+      days: DAYS.map(d => {
+        const open = this.slotsFor(d).filter(s => s.isOpen).length;
+        return {
+          label: d, count: open + ' open',
+          bg: d === day ? '#1C1C24' : '#141419',
+          fg: d === day ? PAPER : '#7E7E8A',
+          sub: d === day ? YELLOW : '#55555F',
+          go: () => this.setState({ day: d })
+        };
+      }),
+
+      boardStamp: 'Week 32 · updated ' + new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
+
+      rows: rows.map(r => ({
+        time: r.time, cls: r.cls, coach: r.coach,
+        cap: r.taken + '/' + r.size,
+        isBooked: r.isBooked, isOpen: r.isOpen, isFull: r.isFull,
+        disabled: r.isFull || r.isBooked,
+        cursor: r.isOpen ? 'pointer' : 'default',
+        rowBg: r.isBooked ? '#191913' : 'transparent',
+        timeFg: r.isFull ? '#55555F' : PAPER,
+        nameFg: r.isFull ? '#5E5E68' : PAPER,
+        capFg: r.isFull ? '#55555F' : '#A2A2AE',
+        aria: r.cls + ' at ' + r.time + ' with coach ' + r.coach + ', ' + (r.isBooked ? 'booked' : r.isFull ? 'full' : 'open, tap to book'),
+        go: () => this.book(r)
+      })),
+
+      hasConfirm: !!confirm,
+      confirmRef: confirm ? confirm.ref : '',
+      confirmTitle: confirm ? confirm.title : '',
+      confirmMeta: confirm ? confirm.meta : '',
+      dismissConfirm: () => this.setState({ confirm: null }),
+      cancelBooking: () => this.setState(s => {
+        const b = Object.assign({}, s.booked);
+        if (s.confirm) delete b[s.confirm.id];
+        return { booked: b, confirm: null };
+      })
+    };
+  }
+
+  go(page) {
+    this.setState({ page, menuOpen: false });
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+}
+
+</script>
+
+
+</body></html>
