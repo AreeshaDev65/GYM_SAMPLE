@@ -421,6 +421,11 @@ window.__resources = {
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
   }
+  /* image-slot's internal <img> ships touch-action:none for its editor drag-to-pan
+     gesture. This page is read-only (no omelette host), so that gesture never
+     activates — but the CSS still blocks native touch scrolling over any filled
+     trainer photo. Restore normal scrolling via the exposed shadow part. */
+  image-slot::part(image) { touch-action: pan-y; }
 </style>
 </helmet>
 
